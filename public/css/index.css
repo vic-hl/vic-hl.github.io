@@ -1,0 +1,63 @@
+:root {
+  --orange: #ff6d00;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/public/webfonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("/public/webfonts/Lobster-Regular.ttf");
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+.lobster {
+  font-family: "Lobster";
+}
+
+#containerNavbar {
+  background-color: white;
+  min-width: 75px;
+}
+
+#navbarLogo {
+  color: var(--orange);
+  font-family: "Lobster";
+  font-size: 52px;
+}
+
+button.navbar-toggler {
+  border: none;
+}
+button.navbar-toggler:active { 
+  border: none!important;
+}
+a.nav-link {  
+  font-weight: bold;
+}
+a.nav-link.active {
+  color: var(--orange)!important;
+}
+
+#introDiv #nombre {
+  color: var(--orange);
+  font-family: "Lobster";  
+}
+
+#introDiv #perfil {
+  color: black;  
+  font-family: var(--bs-font-monospace);
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+#mi-experiencia, #contacto {
+  background-color: var(--orange);
+  color: white;
+}
+
