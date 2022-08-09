@@ -49,15 +49,19 @@ a.nav-link.active {
   font-family: "Lobster";  
 }
 
-#introDiv #perfil {
-  color: black;  
+#introDiv #perfil, h3 {  
   font-family: var(--bs-font-monospace);
   font-weight: bold;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
-#mi-experiencia, #contacto {
+div.seccion:nth-child(odd) {
   background-color: var(--orange);
+  color: white;
+}
+
+#emailContacto, #iconoLinkedin {
+  /* color: var(--orange); */
   color: white;
 }
 
