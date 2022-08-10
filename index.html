@@ -14,28 +14,33 @@
     <nav class="navbar navbar-expand-sm navbar-light py-0">
       <div class="container-fluid" id="containerNavbar">
         <a class="navbar-brand" href="/"><span class="lobster" id="navbarLogo">V.H.L.</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ms-auto me-0">
-            <div class="navbar-item">
-              <a class="nav-link" href="#sobre-mi">Sobre mí</a>
-            </div>
-            <div class="navbar-item">
-              <a class="nav-link" href="#mi-experiencia">Mi experiencia</a>
-            </div>
-            <div class="navbar-item">
-              <a class="nav-link" href="#educacion">Educación</a>
-            </div>
-            <!-- <div class="navbar-item">
-              <a class="nav-link" href="#otros-proyectos">Otros proyectos</a>
-            </div> -->
-            <div class="navbar-item">
-              <a class="nav-link" href="#contacto">Contacto</a>
-            </div>       
-          </ul>
+        <div class="offcanvas offcanvas-top" id="collapsibleNavbar">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto me-0">
+              <div class="navbar-item">
+                <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+              </div>
+              <div class="navbar-item">
+                <a class="nav-link" href="#mi-experiencia">Mi experiencia</a>
+              </div>
+              <div class="navbar-item">
+                <a class="nav-link" href="#educacion">Educación</a>
+              </div>
+              <!-- <div class="navbar-item">
+                <a class="nav-link" href="#otros-proyectos">Otros proyectos</a>
+              </div> -->
+              <div class="navbar-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </div>       
+            </ul>
+          </div>
         </div>
       </div>
     </nav>  
