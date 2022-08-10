@@ -34,22 +34,26 @@ body {
 button.navbar-toggler {
   border: none;
 }
-button.navbar-toggler:active { 
-  border: none!important;
+
+button.navbar-toggler:active {
+  border: none !important;
 }
-a.nav-link {  
+
+a.nav-link {
   font-weight: bold;
 }
+
 a.nav-link.active {
-  color: var(--orange)!important;
+  color: var(--orange) !important;
 }
 
 #introDiv #nombre {
   color: var(--orange);
-  font-family: "Lobster";  
+  font-family: "Lobster";
 }
 
-#introDiv #perfil, h3 {  
+#introDiv #perfil,
+h3 {
   font-family: var(--bs-font-monospace);
   font-weight: bold;
   margin-top: 1rem;
@@ -60,7 +64,8 @@ div.seccion:nth-child(odd) {
   color: white;
 }
 
-#emailContacto, #iconoLinkedin {
+#emailContacto,
+#iconoLinkedin {
   /* color: var(--orange); */
   color: white;
 }
@@ -72,8 +77,8 @@ div.seccion:nth-child(odd) {
 
 #divIrAPrincipio {
   bottom: 15px;
-  right: 5px;  
-  position: fixed;  
+  right: 5px;
+  position: fixed;
 }
 
 .btnNaranja {
@@ -89,4 +94,3 @@ div.seccion:nth-child(odd) {
   border-radius: 2rem;
   color: var(--orange);
 }
-
