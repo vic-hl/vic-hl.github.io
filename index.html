@@ -8,14 +8,35 @@
   <link rel="stylesheet" href="public/css/index.css">
   <script src="/public/js/bootstrap.bundle.min.js"></script>
   <script src="/public/js/index.js"></script>
-  <script>
-    function collapseNavbar() {
-      const bsCollapse = new bootstrap.Collapse("#collapsibleNavbar");
-      bsCollapse.hide();
-    }
+  <script>    
+    function controlScroll() {      
+      const secciones = document.querySelectorAll("div.seccion");
+      const yBottomPosition = window.scrollY + window.innerHeight - 35;
+      const cambiarColorBoton = (i) => {
+        const boton = document.getElementById("btnIrAPrincipio");
+        if (i % 2 == 0) {
+          boton.classList.remove("btnBlanco");
+          boton.classList.add("btnNaranja");
+        } else {
+          boton.classList.remove("btnNaranja");
+          boton.classList.add("btnBlanco");
+        }
+      }
+      for (let i = 0; i < secciones.length; i++) {        
+        if (i < secciones.length - 1) {
+          if (yBottomPosition >= secciones[i].offsetTop && yBottomPosition < secciones[i + 1].offsetTop) {          
+            cambiarColorBoton(i);
+          }
+        } else {
+          if (yBottomPosition >= secciones[i].offsetTop) {
+            cambiarColorBoton(i);
+          }
+        }        
+      }
+    }        
   </script>
 </head>
-<body>
+<body onscroll="controlScroll()">
   <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-sm navbar-light py-0">
       <div class="container-fluid" id="containerNavbar">
@@ -27,19 +48,19 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">                    
           <ul class="navbar-nav ms-auto me-0">
             <div class="navbar-item">
-              <a class="nav-link" href="#sobre-mi" onclick="collapseNavbar()">Sobre mí</a>
+              <a class="nav-link" href="#sobre-mi">Sobre mí</a>
             </div>
             <div class="navbar-item">
-              <a class="nav-link" href="#mi-experiencia" onclick="collapseNavbar()">Mi experiencia</a>
+              <a class="nav-link" href="#mi-experiencia">Mi experiencia</a>
             </div>
             <div class="navbar-item">
-              <a class="nav-link" href="#educacion" onclick="collapseNavbar()">Educación</a>
+              <a class="nav-link" href="#educacion">Educación</a>
             </div>
             <!-- <div class="navbar-item">
               <a class="nav-link" href="#otros-proyectos">Otros proyectos</a>
             </div> -->
             <div class="navbar-item">
-              <a class="nav-link" href="#contacto" onclick="collapseNavbar()">Contacto</a>
+              <a class="nav-link" href="#contacto">Contacto</a>
             </div>       
           </ul>          
         </div>
@@ -187,6 +208,9 @@
           <span id="iconoLinkedin"><i class="fa-brands fa-linkedin fa-3x"></i></span>
         </a>
       </div>
+    </div>
+    <div id="divIrAPrincipio">
+      <a class="btn btn-lg ms-auto me-3 btnNaranja" href="javascript:window.scrollTo(0, 0)" id="btnIrAPrincipio"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
   </div>
 </body>

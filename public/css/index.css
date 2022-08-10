@@ -70,3 +70,23 @@ div.seccion:nth-child(odd) {
   border-radius: 15px;
 }
 
+#divIrAPrincipio {
+  bottom: 15px;
+  right: 5px;  
+  position: fixed;  
+}
+
+.btnNaranja {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  border-radius: 2rem;
+  color: white;
+}
+
+.btnBlanco {
+  background-color: white;
+  border-color: white;
+  border-radius: 2rem;
+  color: var(--orange);
+}
+
